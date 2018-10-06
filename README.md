@@ -199,16 +199,6 @@ func main() {
 }
 ```
 ```
-[yaroglek@centos-new 文档]$ hello mynameissuzuki woshilingmu suzukitoiimasu whoareyou nishishui donatadesuka iammiura wojiaosanpu miuradesu
-Argument 1 is mynameissuzuki
-Argument 2 is woshilingmu
-Argument 3 is suzukitoiimasu
-Argument 4 is whoareyou
-Argument 5 is nishishui
-Argument 6 is donatadesuka
-Argument 7 is iammiura
-Argument 8 is wojiaosanpu
-Argument 9 is miuradesu
 [yaroglek@centos-new 文档]$ hello mynameissuzuki woshilingmu suzukitoiimasu whoareyou nishishui donatadesuka iammiura wojiaosanpu miuradesu | selpg -s1 -e2 -l3
 Argument 1 is mynameissuzuki
 Argument 2 is woshilingmu
