@@ -2,9 +2,9 @@ package main
 
 import (
 	"bufio"
-    "fmt"
-    "io"
-    "os"
+	"fmt"
+	"io"
+	"os"
 	"os/exec"
 	flag "github.com/spf13/pflag"
 )
@@ -25,27 +25,27 @@ var progname string
 
 func usage() {
 	fmt.Printf("Usage of %s:\n\n", progname)
-    fmt.Printf("%s is a tool to select pages from what you want.\n\n", progname)
-    fmt.Printf("Usage:\n\n")
-    fmt.Printf("\tselpg -s=Number -e=Number [options] [filename]\n\n")
-    fmt.Printf("The arguments are:\n\n")
-    fmt.Printf("\t-s=Number\tStart from Page <number>.\n")
-    fmt.Printf("\t-e=Number\tEnd to Page <number>.\n")
-    fmt.Printf("\t-l=Number\t[options]Specify the number of line per page. Default is 72.\n")
-    fmt.Printf("\t-f\t\t[options]Specify that the pages are sperated by \\f.\n")
-    fmt.Printf("\t[filename]\t[options]Read input from the file.\n\n")
-    fmt.Printf("If no file specified, %s will read input from stdin. Control-D to end.\n\n", progname)
+	fmt.Printf("%s is a tool to select pages from what you want.\n\n", progname)
+	fmt.Printf("Usage:\n\n")
+	fmt.Printf("\tselpg -s=Number -e=Number [options] [filename]\n\n")
+	fmt.Printf("The arguments are:\n\n")
+	fmt.Printf("\t-s=Number\tStart from Page <number>.\n")
+	fmt.Printf("\t-e=Number\tEnd to Page <number>.\n")
+	fmt.Printf("\t-l=Number\t[options]Specify the number of line per page. Default is 72.\n")
+	fmt.Printf("\t-f\t\t[options]Specify that the pages are sperated by \\f.\n")
+	fmt.Printf("\t[filename]\t[options]Read input from the file.\n\n")
+	fmt.Printf("If no file specified, %s will read input from stdin. Control-D to end.\n\n", progname)
 }
 
 func main() {
 	av := os.Args
 	ac := len(av)
 	progname = av[0]
-    var sa selpg_args
-    flag.IntVarP(&sa.start_page, "startpage", "s", -1, "Start page.")
-    flag.IntVarP(&sa.end_page, "endpage", "e", -1, "End page.")
-    flag.IntVarP(&sa.page_len, "length", "l", 72, "Line number per page.")
-    flag.BoolVarP(&sa.page_type, "form", "f", false, "Determine form-feed-delimited")
+	var sa selpg_args
+	flag.IntVarP(&sa.start_page, "startpage", "s", -1, "Start page.")
+	flag.IntVarP(&sa.end_page, "endpage", "e", -1, "End page.")
+	flag.IntVarP(&sa.page_len, "length", "l", 72, "Line number per page.")
+	flag.BoolVarP(&sa.page_type, "form", "f", false, "Determine form-feed-delimited")
 	flag.StringVarP(&sa.print_dest, "destination", "d", "", "specify the printer")
 	flag.Usage = usage
 	flag.Parse()
@@ -158,7 +158,7 @@ func process_input(sa *selpg_args) {
 	var cmd *exec.Cmd
 	var err error
 	line_ptr := 0
-    page_ptr := 1
+	page_ptr := 1
 	if sa.print_dest == "" {
 		stdin = nil
 	} else {
@@ -173,48 +173,48 @@ func process_input(sa *selpg_args) {
 			fmt.Fprintf(os.Stderr, "%s: serious error\n", progname)
 			os.Exit(13)
 		}
-        output, err := os.Open(sa.in_filename)
-        reader := bufio.NewReader(output)
-        if sa.page_type == true {
-            for i := 1; i <= sa.end_page; i++ {
-                s1, err = reader.ReadString('\f')
-                if err != io.EOF && err != nil {
-                    fmt.Println(err)
-                    os.Exit(14)
-                }
-                if err == io.EOF {
-                    break
+		output, err := os.Open(sa.in_filename)
+		reader := bufio.NewReader(output)
+		if sa.page_type == true {
+			for i := 1; i <= sa.end_page; i++ {
+				s1, err = reader.ReadString('\f')
+				if err != io.EOF && err != nil {
+					fmt.Println(err)
+					os.Exit(14)
+				}
+				if err == io.EOF {
+					break
 				}
 				if i >= sa.start_page {
 					print(sa, s1, stdin)
 				}
-            }
-        } else {
-            for i := 0; true; i++{
-                line, _, err := reader.ReadLine()
-                if err != io.EOF && err != nil {
-                    fmt.Println(err)
-                    os.Exit(1)
+			}
+		} else {
+			for i := 0; true; i++ {
+				line, _, err := reader.ReadLine()
+				if err != io.EOF && err != nil {
+					fmt.Println(err)
+					os.Exit(1)
 				}
-                if err == io.EOF {
-                    break
+				if err == io.EOF {
+					break
 				}
-                if j := i/sa.page_len + 1; j >= sa.start_page && j <= sa.end_page {
-					 print(sa, string(line), stdin)
-                } else if j >= sa.end_page {
+				if j := i/sa.page_len + 1; j >= sa.start_page && j <= sa.end_page {
+					print(sa, string(line), stdin)
+				} else if j >= sa.end_page {
 					break
 				}
 			}
-        }
-    } else {
+		}
+	} else {
 		s1 = ""
 		s2 = ""
-        scanner := bufio.NewScanner(os.Stdin)
+		scanner := bufio.NewScanner(os.Stdin)
 		for scanner.Scan() {
 			s1 += scanner.Text()
 			s1 += string("\n")
 		}
-        for i := 0; i < len(s1); i++ {
+		for i := 0; i < len(s1); i++ {
 			if s1[i] != '\n' {
 				s2 += string(s1[i])
 			} else {
@@ -230,21 +230,21 @@ func process_input(sa *selpg_args) {
 					line_ptr = 0
 				}
 			}
-        }
-    }
-    if sa.print_dest != "" {
-        stdin.Close()
-        cmd.Stdout = os.Stdout
-        cmd.Run()
-    }
+		}
+	}
+	if sa.print_dest != "" {
+		stdin.Close()
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
 }
 
 func print(sa *selpg_args, line string, stdin io.WriteCloser) {
-    if sa.print_dest != "" {
-        stdin.Write([]byte(line + "\n"))
-    } else {
-        fmt.Println(line)
-    }
+	if sa.print_dest != "" {
+		stdin.Write([]byte(line + "\n"))
+	} else {
+		fmt.Println(line)
+	}
 }
 
 func atoi(s string, i int) int {
