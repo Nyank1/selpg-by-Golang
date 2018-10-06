@@ -178,7 +178,6 @@ selpg: invalid start page 0
 ```
 [yaroglek@centos-new 文档]$ selpg -s2 -e3 -l3 test >/dev/null
 [yaroglek@centos-new 文档]$ cat /dev/null 
-
 ```
 ---
 ## 测试8
