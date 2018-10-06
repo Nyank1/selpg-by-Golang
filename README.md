@@ -311,7 +311,7 @@ onakagasukimashita
 ```
 ---
 ## 测试15
-在基本确认`selpg`命令无明显bug后, 将`selpg`进行应用. `hamlet.txt`是一部小说, 篇幅较长, 使用一般的阅读器如`Vim`, `记事本`等并不易读取后面内容. 读取`hamlet.txt`的第15页, 规定每页72行.
+在基本确认`selpg`命令无明显bug后, 将`selpg`进行应用. `hamlet.txt`是一部小说, 篇幅较长, 因此使用一般的阅读器如`Vim`, `记事本`等并不容易读取后面内容. 读取`hamlet.txt`的第15页, 规定每页72行.
 ```
 [yaroglek@centos-new 文档]$ selpg -s15 -e15 -dlp1 hamlet.txt 
      1	  Ham. Hic et ubique? Then we'll shift our ground.
