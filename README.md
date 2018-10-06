@@ -233,25 +233,6 @@ onakagasukimashita
 ---
 ## 测试10
 ```
-[yaroglek@centos-new 文档]$ selpg -s0 -e3 -l3 test 2>errortest3
-Usage of selpg:
-
-selpg is a tool to select pages from what you want.
-
-Usage:
-
-	selpg -s=Number -e=Number [options] [filename]
-
-The arguments are:
-
-	-s=Number	Start from Page <number>.
-	-e=Number	End to Page <number>.
-	-l=Number	[options]Specify the number of line per page. Default is 72.
-	-f		[options]Specify that the pages are sperated by \f.
-	[filename]	[options]Read input from the file.
-
-If no file specified, selpg will read input from stdin. Control-D to end.
-
 [yaroglek@centos-new 文档]$ selpg -s0 -e3 -l3 test 2>errortest3 | wc
      18      72     469
 [yaroglek@centos-new 文档]$ cat errortest3
