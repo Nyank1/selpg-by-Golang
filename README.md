@@ -220,13 +220,6 @@ Argument 6 is donatadesuka
 ---
 ## 测试9
 ```
-[yaroglek@centos-new 文档]$ selpg -s2 -e3 -l3 test
-hello
-nihao
-konnichiwa
-i am hungry
-woele
-onakagasukimashita
 [yaroglek@centos-new 文档]$ selpg -s2 -e3 -l3 test | wc
       6       8      60
 ```
