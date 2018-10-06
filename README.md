@@ -50,7 +50,7 @@ func atoi(s string, i int) int //相当于C语言的atoi()函数, 将s字符串i
 
 ---
 ## 测试1
-新建测试文件`test`
+新建测试文件`test`.
 ```
 good morning
 zaoshanghao
@@ -240,7 +240,7 @@ selpg: invalid start page 0
 ```
 ---
 ## 测试11
-新建测试文件`ftest`
+新建测试文件`ftest`.
 ```
 [yaroglek@centos-new 文档]$ echo -e good morning'\n'morning'\f'good afternoon'\n'afternoon'\f'good evening'\n'evening'\f'good night'\n'night >ftest
 [yaroglek@centos-new 文档]$ cat ftest
