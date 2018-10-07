@@ -119,6 +119,7 @@ The arguments are:
 	-eNumber	End to Page <number>.
 	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
+	-tDestination	Send output to the printer of Destination.
 	[filename]	[options]Read input from the file.
 
 If no file specified, selpg will read input from stdin. Control-D to end.
@@ -143,6 +144,7 @@ The arguments are:
 	-eNumber	End to Page <number>.
 	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
+	-tDestination	Send output to the printer of Destination.
 	[filename]	[options]Read input from the file.
 
 If no file specified, selpg will read input from stdin. Control-D to end.
@@ -169,6 +171,7 @@ The arguments are:
 	-eNumber	End to Page <number>.
 	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
+	-tDestination	Send output to the printer of Destination.
 	[filename]	[options]Read input from the file.
 
 If no file specified, selpg will read input from stdin. Control-D to end.
