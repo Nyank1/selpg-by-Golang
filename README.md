@@ -1,5 +1,7 @@
 # CLI 命令行实用程序开发基础 实验报告
 ## 16340299 赵博然
+# 实验内容
+使用`Golang`开发 [开发 Linux 命令行实用程序](https://www.ibm.com/developerworks/cn/linux/shell/clutil/index.html) 中的`selpg`.
 # 设计说明
 参考以下C代码, 和CSDN博客. 原谅我英语水平太差, `usage()`函数是照着博客写的.
 
