@@ -111,13 +111,13 @@ selpg is a tool to select pages from what you want.
 
 Usage:
 
-	selpg -s=Number -e=Number [options] [filename]
+	selpg -sNumber -eNumber [options] [filename]
 
 The arguments are:
 
-	-s=Number	Start from Page <number>.
-	-e=Number	End to Page <number>.
-	-l=Number	[options]Specify the number of line per page. Default is 72.
+	-sNumber	Start from Page <number>.
+	-eNumber	End to Page <number>.
+	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
 	[filename]	[options]Read input from the file.
 
@@ -135,13 +135,13 @@ selpg is a tool to select pages from what you want.
 
 Usage:
 
-	selpg -s=Number -e=Number [options] [filename]
+	selpg -sNumber -eNumber [options] [filename]
 
 The arguments are:
 
-	-s=Number	Start from Page <number>.
-	-e=Number	End to Page <number>.
-	-l=Number	[options]Specify the number of line per page. Default is 72.
+	-sNumber	Start from Page <number>.
+	-eNumber	End to Page <number>.
+	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
 	[filename]	[options]Read input from the file.
 
@@ -161,13 +161,13 @@ selpg is a tool to select pages from what you want.
 
 Usage:
 
-	selpg -s=Number -e=Number [options] [filename]
+	selpg -sNumber -eNumber [options] [filename]
 
 The arguments are:
 
-	-s=Number	Start from Page <number>.
-	-e=Number	End to Page <number>.
-	-l=Number	[options]Specify the number of line per page. Default is 72.
+	-sNumber	Start from Page <number>.
+	-eNumber	End to Page <number>.
+	-lNumber	[options]Specify the number of line per page. Default is 72.
 	-f		[options]Specify that the pages are sperated by \f.
 	[filename]	[options]Read input from the file.
 
