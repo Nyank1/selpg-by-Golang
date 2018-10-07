@@ -222,7 +222,7 @@ Argument 6 is donatadesuka
 ## 测试10
 ```
 [yaroglek@centos-new 文档]$ selpg -s0 -e3 -l3 test 2>errortest3 | wc
-     18      72     464
+     19      80     522
 [yaroglek@centos-new 文档]$ cat errortest3
 selpg: invalid start page 0
 ```
