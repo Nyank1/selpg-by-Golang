@@ -4,7 +4,7 @@
 # 实验内容
 使用`Golang`开发 [开发 Linux 命令行实用程序](https://www.ibm.com/developerworks/cn/linux/shell/clutil/index.html) 中的`selpg`.
 # 设计说明
-参考以下`C`代码, 和`CSDN`博客. 原谅我英语水平太差, `usage()`函数是照着博客写的.
+参考以下`C`代码, 和`CSDN`博客.
 
 https://www.ibm.com/developerworks/cn/linux/shell/clutil/selpg.c
 
