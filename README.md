@@ -4,7 +4,7 @@
 # 实验内容
 使用`Golang`开发 [开发 Linux 命令行实用程序](https://www.ibm.com/developerworks/cn/linux/shell/clutil/index.html) 中的`selpg`.
 # 设计说明
-参考以下C代码, 和CSDN博客. 原谅我英语水平太差, `usage()`函数是照着博客写的.
+参考以下`C`代码, 和`CSDN`博客. 原谅我英语水平太差, `usage()`函数是照着博客写的.
 
 https://www.ibm.com/developerworks/cn/linux/shell/clutil/selpg.c
 
@@ -27,7 +27,7 @@ import (
 ```
 const INT_MAX = int(^uint(0) >> 1)
 ```
-结构体`selpg_args`. 与C代码是一样的.
+结构体`selpg_args`. 与`C`代码是一样的.
 ```
 type selpg_args struct
 {
@@ -184,7 +184,7 @@ selpg: invalid start page 0
 ```
 ---
 ## 测试8
-导入hello命令. hello.go的代码如下.
+导入`hello`命令. `hello.go`的代码如下.
 ```
 package main
 
